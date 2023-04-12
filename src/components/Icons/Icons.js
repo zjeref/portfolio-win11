@@ -10,7 +10,7 @@ const Icons = () => {
         <div className="flex flex-col space-y-4 mx-4 select-none">
             {
                 icons.map((icon) => {
-                    return <Icon key={icon.name} icon={icon} />
+                    return <Icon key={icon.id} icon={icon} />
                 })
             }
         </div>

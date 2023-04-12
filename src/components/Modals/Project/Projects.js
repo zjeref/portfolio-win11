@@ -35,7 +35,7 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className='w-full flex flex-col items-center bg-slate-200'>
+            <div className='w-full flex flex-col items-center py-4 bg-slate-200'>
                 <div>
                     <h1 className='text-2xl font-bold text-slate-700 font-mono'>All Projects</h1>
                 </div>
