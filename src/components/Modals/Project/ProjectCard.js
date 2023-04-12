@@ -5,7 +5,6 @@ const ProjectCard = ({ projectdata }) => {
     useEffect(() => {
         setData(projectdata);
     }, [projectdata])
-    console.log(projectdata.imageUrl)
     return (
         <>
             {data &&

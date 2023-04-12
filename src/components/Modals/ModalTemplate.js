@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { RxCross2 } from 'react-icons/rx';
 import { MdMinimize } from 'react-icons/md';
 import { FiMaximize2 } from 'react-icons/fi';
-import Aboutme from './Aboutme';
+import Aboutme from './Aboutme/Aboutme';
 import Projects from './Project/Projects';
 import { AppContext } from '../../middlewares/app-switch';
 
@@ -45,12 +45,11 @@ const ModalTemplate = () => {
     dispatch({ type: "CURRENT_APP", payload: "" })
   }
 
-
   return (
     <>
       {AppData?.currentApp===""? "":
       <div
-        className="max-w-6xl bg-white absolute w-11/12 max-h-[90vh] min-h-[80vh] h-full top-16 left-28  select-none"
+        className="max-w-6xl bg-white absolute w-10/12 max-h-[90vh] min-h-[80vh] h-full top-16 left-28  select-none"
         style={{
           transform: `translate(${position.x}px, ${position.y}px)`,
         }}
@@ -58,7 +57,7 @@ const ModalTemplate = () => {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
-        <div className="bg-blue-600 text-white flex justify-between text-lg  w-full sticky top-0 menu">
+        <div className="bg-blue-600 text-white flex justify-between text-lg  w-full sticky top-0 menu z-10">
           <div className="ml-2">
             <span>{AppData?.currentApp}</span>
           </div>
@@ -75,7 +74,7 @@ const ModalTemplate = () => {
           </div>
         </div>
         <div className="overflow-y-auto h-full" style={{ height: 'calc(100% - 2rem)' }}>
-          {AppData?.currentApp === "About me" && <Aboutme />}
+          {AppData?.currentApp === "About Me" && <Aboutme/>}
           {AppData?.currentApp === "Projects" && <Projects />}
 
           {/* {AppData?.currentApp === "Resume" && <Resume />}
