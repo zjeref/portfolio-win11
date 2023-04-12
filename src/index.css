@@ -30,5 +30,9 @@ code {
 }
 
 .projects-menu {
-  @apply flex space-x-2 items-center font-semibold hover:text-blue-500 cursor-pointer
+  @apply flex space-x-2 items-center font-semibold hover:text-blue-300 cursor-pointer
+}
+
+.projectCard-btn {
+  @apply  px-2 py-1 text-white rounded-sm hover:opacity-80
 }

@@ -12,9 +12,13 @@ const ModalTemplate = () => {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
   const handleMouseDown = (event) => {
-    setIsDragging(true);
-    setInitialPosition({ x: event.clientX, y: event.clientY });
+    // Check if the target is the menu element or one of its children
+    if (event.target.closest('.menu')) {
+      setIsDragging(true);
+      setInitialPosition({ x: event.clientX, y: event.clientY });
+    }
   };
+
 
   const handleMouseUp = () => {
     setIsDragging(false);
@@ -31,7 +35,7 @@ const ModalTemplate = () => {
 
   return (
     <div
-      className="max-w-8xl bg-white absolute w-11/12 max-h-[90vh] min-h-[80vh] h-full top-16 left-28  select-none"
+      className="max-w-7xl bg-white absolute w-11/12 max-h-[90vh] min-h-[80vh] h-full top-16 left-28  select-none"
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
       }}
@@ -39,7 +43,7 @@ const ModalTemplate = () => {
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
     >
-      <div className="bg-blue-600 text-white flex justify-between text-lg  w-full sticky top-0">
+      <div className="bg-blue-600 text-white flex justify-between text-lg  w-full sticky top-0 menu">
         <div className="ml-2">
           <span>About me</span>
         </div>
