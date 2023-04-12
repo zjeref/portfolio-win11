@@ -18,11 +18,14 @@ code {
     monospace;
 }
 
+.singleSelect {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .icons:hover {
 
-  background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .taskbar-icon {
