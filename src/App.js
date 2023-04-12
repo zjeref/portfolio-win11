@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Background from "./components/Background";
+import Icons from "./components/Icons/Icons";
+import ModalTemplate from "./components/Modals/ModalTemplate";
+import Taskbar from "./components/Taskbar/Taskbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen flex flex-col overflow-hidden">
+      <Background />
+      <div className="relative h-full">
+        <Icons />
+        <ModalTemplate />
+      </div>
+      <Taskbar />
     </div>
   );
 }

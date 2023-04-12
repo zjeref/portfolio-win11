@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.icons:hover {
+
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.taskbar-icon {
+  @apply w-full h-full flex items-center px-2 py-1 cursor-pointer
+}
+
+.projects-menu {
+  @apply flex space-x-2 items-center font-semibold hover:text-blue-500 cursor-pointer
 }

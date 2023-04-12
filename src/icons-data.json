@@ -1,0 +1,25 @@
+{
+    "data":[
+        {
+            "name":"About Me",
+            "icon":"https://cdn-icons-png.flaticon.com/512/4310/4310155.png",
+            "action":""
+        },
+        {
+            "name":"Projects",
+            "icon":"https://cdn-icons-png.flaticon.com/512/10213/10213372.png",
+            "action":""
+        },
+        {
+            "name":"Hire Me",
+            "icon":"https://cdn-icons-png.flaticon.com/512/1412/1412222.png",
+            "action":""
+        },
+        {
+            "name":"Resume",
+            "icon":"https://cdn-icons-png.flaticon.com/512/3135/3135731.png",
+            "action":""
+        }
+
+    ]
+}
